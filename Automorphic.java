@@ -1,27 +1,13 @@
-class Demofunction
-{
-public static String auto(int n)
-{
-String msg="";
-int s=0;
-int r=n%10;
-s=r*r;
-if(s==n)
-{
-msg="Num is Automorphic";
-}
-else
-{
-msg="Num is not Automorphic";
-}
-return(msg);
-}
-public static void main(String ab[])
-{
-int x;
-String r;
-x=Integer.parseInt(ab[0]);
-r=auto(x);
-System.out.println(r);
-}
+public class MyClass {
+    public static void main(String args[]) {
+      String num = args[0];
+      long numAsInt = Long.parseLong(num);
+      long sqr = numAsInt*numAsInt;
+      
+      if ((""+sqr).endsWith(num)) {
+          System.out.println("Automorphic");
+      } else {
+          System.out.println("not");
+      }
+    }
 }
